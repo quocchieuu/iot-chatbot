@@ -1,0 +1,38 @@
+{
+  "name": "smarthome_web",
+  "version": "1.0.0",
+  "description": "Hệ thống điều khiển nhà thông minh",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.quochieu.smarthome",
+    "productName": "Smart Home Pro AI",
+    "win": {
+      "icon": "icon1.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AIoT Home"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "keywords": [],
+  "author": "Quoc Hieu",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.2.1",
+    "electron-builder": "^26.8.1"
+  }
+}
